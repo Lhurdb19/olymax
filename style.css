@@ -250,7 +250,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 50px 0px;
   gap: 20px;
   background-color: #060a5d;
 }
@@ -279,12 +279,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 50px;
   gap: 20px;
 }
 @media screen and (max-width:650px) {
     .home-page {
         width: 100%;
         flex-direction: column;
+        padding: 0px;
         gap: 10px;
     }
 }
@@ -297,7 +299,7 @@
 }
 
 .home-page > .welcome {
-  width: 100%;
+  width: 60%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -307,14 +309,14 @@
 
 .welcome > p {
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: orangered;
   transform-style: flat;
 }
 
 .welcome > h2 {
-  width: 60%;
-  font-size: 5rem;
+  width: 70%;
+  font-size: 3rem;
   font-weight: bolder;
   color: white;
 }
@@ -348,14 +350,14 @@
 }
 
 .home-page > .welcome > a {
-  width: 50%;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration:none;
   font-size: 1.2rem;
   font-weight: bolder;
-  padding: 20px 10px;
+  padding: 10px;
   gap: 10px;
   background-color: orangered;
   color: white;
@@ -392,9 +394,9 @@
 }
 
 .home-page > .cup {
-  width: 80%;
-  height: 400px;
-  padding: 10px;
+  width: 70%;
+  height:570px;
+  /* padding: 10px; */
   animation: scale 1s alternate infinite;
   background-image: url("https://i.ibb.co/4fDRDvJ/cup.png");
   background-position: center;
@@ -403,42 +405,42 @@
 }
 @keyframes scale {
   0% {
-    scale: 0.8;
+    scale: 0.6;
     transition: 0.1s ease-in-out;
   }
   100% {
-    scale: 0.9;
-    transition: 0.2s ease-in-out;
+    scale: 0.5;
+    transition: 0.1s ease-in-out;
   }
 }
 
 @media screen and (max-width:650px) {
     .home-page > .cup {
-        width: 100%;
-        height: 260px;
+        width: 90%;
+        height: 270px;
         padding: 0px;
     }
     @keyframes scale {
         0% {
-            scale: 0.8;transition: 0.1s ease-in-out;
+            scale: 0.4;transition: 0.1s ease-in-out;
         }
         100% {
-            scale: 0.9;transition: 0.1s ease-in-out;
+            scale: 0.5;transition: 0.1s ease-in-out;
         }
     }
 }
 @media screen and (max-width:768px) {
     .home-page > .cup {
-        width: 60%;
-        height: 200px;
+        width: 90%;
+        height: 300px;
         padding: 0px;
     }
     @keyframes scale {
         0% {
-            scale: 0.8;transition: 0.1s ease-in-out;
+            scale: 0.4;transition: 0.1s ease-in-out;
         }
         100% {
-            scale: 0.9;transition: 0.1s ease-in-out;
+            scale: 0.5;transition: 0.1s ease-in-out;
         }
     }
 }
@@ -1575,7 +1577,7 @@
   color: #fe4328;
 }
 .box:nth-child(2) > a {
-  width: 100%;
+  width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1910,7 +1912,7 @@
 }
 
 .recent-page > a {
-  width: 70%;
+  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
