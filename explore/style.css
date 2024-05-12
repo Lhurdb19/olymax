@@ -1,0 +1,915 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: semibold;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url("/assets/static/Montserrat-Light.ttf");
+}
+@font-face {
+    font-family: semibold;
+    src: url('/assets/static/Montserrat-SemiBoldItalic.ttf');
+}
+  
+  .nav-container {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    padding: 0px 50px;
+    background-color:#060A5D;
+  }
+  
+  .logo {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: bolder;
+  }
+
+  .logo > a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .navbar > ul {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+
+  .navbar > ul > li > a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+  }
+  .explores {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 10px;
+    border: 0.5px solid red;
+  }
+  
+  .explores:hover {
+    background-color: orangered;
+  }
+  .explores > a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    gap: 20px;
+    font-weight: bolder;
+    transition: 0.3s ease-in-out;
+  }
+  .explores:hover > a {
+    padding-left: 20px;
+    transition: 0.3s ease-in-out;
+  }
+
+  a > .fa-solid {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 5px;
+    background-color: white;
+    color: orangered;
+  }
+
+  .handburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    display: none;
+}
+
+.handburger > .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px auto;
+    transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width:650px) {
+    .nav-container {
+        padding: 10px;
+        border-bottom: 0.1px solid orangered;
+    }
+
+    .nav-container > .logo {
+        margin: 0%;
+        font-size: 1.5rem;
+    }
+    .navbar {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: absolute;
+        padding: 10px;
+        top: 60px;
+        left: -100%;
+        transition: 0.5s ease-in-out;
+        background-color: white;
+    }
+
+    .navbar > ul {
+        flex-direction: column;
+        margin-left: 0%;
+    }
+
+    .navbar > ul > li > a { 
+        font-size: 1.1rem;
+        color: black;
+    }
+
+    .explores {
+        padding: 5px;
+    }
+    .explores > a {
+        width: 100%;
+        display: flex;
+        color: #fe4328;
+        font-size: 0.8rem;
+        gap: 5px;
+    }
+
+    .navbar.active {
+        left: 0%;
+    }
+
+    .handburger {
+        display: block;
+    }
+
+    .handburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(-45deg);
+    }
+    .handburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .handburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(45deg);
+    }
+}
+@media screen and (max-width:768px) {
+    .nav-container {
+        padding: 10px;
+        height: 50px;
+        border-bottom: 0.1px solid orangered;
+    }
+
+    .nav-container > .logo {
+        margin: 0%;
+        font-size: 1.5rem;
+    }
+    .navbar {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: absolute;
+        padding: 10px;
+        top: 60px;
+        left: -100%;
+        transition: 0.5s ease-in-out;
+        background-color: white;
+    }
+
+    .navbar > ul {
+        flex-direction: column;
+        margin-left: 0%;
+    }
+
+    .navbar > ul > li > a { 
+        font-size: 1.1rem;
+        color: black;
+    }
+
+    .explores {
+        padding: 5px;
+    }
+    .explores > a {
+        width: 100%;
+        display: flex;
+        color: #fe4328;
+        font-size: 0.8rem;
+        gap: 5px;
+    }
+
+    .navbar.active {
+        left: 0%;
+    }
+
+    .handburger {
+        display: block;
+    }
+
+    .handburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(-45deg);
+    }
+    .handburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .handburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(45deg);
+    }
+}
+
+  .explore-container {
+    width: 100%;
+    height: 90vh;
+    background-image: url("https://i.ibb.co/tBfBCgM/marg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+  }
+
+  .text {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.308);
+  }
+  .text > h1 {
+    width: 60%;
+    font-size: 2rem;
+    color: white;
+  }
+  .text > a {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 20px 0px;
+    gap: 5px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #FE4328;
+    transition: 0.5s ease-in-out;
+  }
+
+  .text > a:hover {
+    opacity: 0.7;
+    transition: 0.5s ease-in-out;
+  }
+
+  .text > a > .fa-solid {
+    background-color: transparent;
+    color: white;
+    transition: 0.5s ease-in-out;
+  }
+  .text > a:hover > .fa-solid {
+    padding-left: 25px;
+    transition: 0.5s ease-in-out;
+  }
+
+  @media screen and (max-width:650px) {
+    .explore-container {
+        width: 100%;
+        height: 80vh;
+        padding: 100px 10px;
+    }
+    .text {
+        width: 100%;
+        height: 80vh;
+        padding: 100px 10px;
+        gap: 10px;
+    }
+    .text > h1 {
+        width: 100%;
+        font-size: 1.6rem;
+    }
+    .text > a {
+        width: 100%;
+        padding: 5px;
+        font-size: 1.1rem;
+    }
+  }
+  @media screen and (max-width:768px) {
+    .explore-container {
+        width: 100%;
+        height: 80vh;
+        padding: 100px 10px;
+    }
+    .text {
+        width: 100%;
+        height: 80vh;
+        padding: 100px 10px;
+        gap: 10px;
+    }
+    .text > h1 {
+        width: 100%;
+        font-size: 1.6rem;
+    }
+    .text > a {
+        width: 100%;
+        padding: 5px;
+        font-size: 1.1rem;
+    }
+  }
+
+  .recent-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 50px;
+    gap: 20px;
+  }
+
+  .recent-page > p {
+    color: #FE4328;
+    font-size: 1.5rem;
+  }
+
+  .recent-page > h1 {
+    width: 70%;
+    font-size: 2.5rem;
+  }
+
+  .recent-page > .work-con {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .work-con > .design {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .work-con > .design:hover > img {
+    scale: 1.2;
+    transition: 0.4s ease-in-out;
+  }
+
+  @media screen and (max-width:650px) {
+    .recent-page {
+        width: 100%;
+        padding: 10px;
+        gap: 10px;
+    }
+    .recent-page > .work-con {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .recent-page > p {
+        font-size: 0.8rem;
+    }
+    .recent-page > h1 {
+        font-size: 1.6rem;
+    }
+    .work-con > .design {
+        width: 100%;
+        height:  300px;
+    }
+  }
+  @media screen and (max-width:768px) {
+    .recent-page {
+        width: 100%;
+        padding: 10px;
+        gap: 10px;
+    }
+    .recent-page > .work-con {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .recent-page > p {
+        font-size: 0.8rem;
+    }
+    .recent-page > h1 {
+        font-size: 1.6rem;
+    }
+    .work-con > .design {
+        width: 100%;
+        height:  300px;
+    }
+  }
+
+  .design > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    transition: 0.4s ease-in-out; 
+  }
+
+  .design > h2 { 
+    position: absolute;
+    color: #FE4328;
+    padding: 20px; 
+    font-size: 1.4rem;
+    transition: 0.4s ease-in-out;
+  }
+  .design:hover > h2 {
+    scale: 1.2;
+    color: #060A5D;
+    padding-left: 40px;
+    transition: 0.5s ease-in-out;
+  }
+
+  .footer-card {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    gap: 20px;
+    background-color: #222222;
+  }
+  
+  @media screen and (max-width:650px) {
+      .footer-card {
+          width: 100%;
+          height: fit-content;
+          flex-direction: column;
+          padding: 0px 10px;
+      }
+  }
+  @media screen and (max-width:768px) {
+      .footer-card {
+          width: 100%;
+          height: fit-content;
+          flex-direction: column;
+          padding: 0px 10px;
+      }
+  }
+  
+  .footer-card > .olymax {
+    width: 30%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 85px 10px;
+    gap: 20px;
+    background-color: black;
+  }
+  .olymax > a {
+    font-size: 1.5rem;
+    display: flex;
+    text-decoration: none;
+    gap: 10px;
+    color: white;
+  }
+  .olymax > a > .fa-solid {
+    background-color: transparent;
+  }
+  .olymax > p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    color: white;
+  }
+  .olymax > h3 {
+    font-weight: bolder;
+    color: white;
+  }
+  
+  .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .link > p > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+  }
+  
+  .link > p > a > .fa-brands {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+  .link > p > a > .fa-brands:hover {
+      color: #fe4328;
+      background-color: white;
+  }
+  footer {
+      color: white;
+      font-size: 0.7rem;
+  }
+  
+  @media screen and (max-width:650px) {
+      .footer-card > .olymax {
+          width: 100%;
+          height: fit-content;
+          flex-direction: column;
+          padding: 10px;
+          gap: 10px;
+      }
+      .olymax > a {
+          font-size: 1.7rem;
+      }
+      .olymax > p {
+          font-size: 0.8rem;
+          line-height: 1.5rem;
+      }
+      .olymax > h3 {
+          font-weight: bold;
+      }
+      .link > p > a > .fa-brands {
+          width: 30px;
+          height: 30px;
+          font-size: 0.7rem;
+      }
+      footer {
+          font-size: 0.8rem;
+      }
+  }
+  @media screen and (max-width:768px) {
+      .footer-card > .olymax {
+          width: 100%;
+          height: fit-content;
+          flex-direction: column;
+          padding: 10px;
+          gap: 10px;
+      }
+      .olymax > a {
+          font-size: 1.7rem;
+      }
+      .olymax > p {
+          font-size: 0.8rem;
+          line-height: 1.5rem;
+      }
+      .olymax > h3 {
+          font-weight: bold;
+      }
+      .link > p > a > .fa-brands {
+          width: 30px;
+          height: 30px;
+          font-size: 0.7rem;
+      }
+      footer {
+          font-size: 0.8rem;
+      }
+  }
+  
+  
+  .footer-card > .company-con {
+    width: 70%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px;
+    gap: 50px;
+  }
+  .company-con > .com-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* padding: 50px; */
+    gap: 10px;
+  }
+  
+  @media screen and (max-width:650px) {
+      .footer-card > .company-con {
+          width: 100%;
+          height: fit-content;
+          padding: 10px;
+          gap: 10px;
+      }
+      .company-con > .com-box {
+          width: 100%;
+          height: fit-content;
+          flex-direction: column;
+      }
+  }
+  @media screen and (max-width:768px) {
+      .footer-card > .company-con {
+          width: 100%;
+          height: fit-content;
+          padding: 10px;
+          gap: 10px;
+      }
+      .company-con > .com-box {
+          width: 100%;
+          height: fit-content;
+          flex-direction: column;
+      }
+  }
+  
+  .company {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 20px;
+  }
+  .company > h3 {
+      font-size: 1rem;
+      color: #fe4328;
+  }
+  .company > a {
+      text-decoration: none;
+      color: white;
+      font-size: 0.8rem;
+      transition: 0.3s ease-in-out;
+  }
+  
+  .company > a:hover {
+      color: #fe4328;
+      padding-left: 10px;
+      transition: 0.3s ease-in-out;
+  }
+  
+  @media screen and (max-width:650px) {
+      .company {
+          width: 100%;
+          gap: 10px;
+          font-size: 0.8rem;
+      }
+      .company > h3 {
+          font-size: 1rem;
+      }
+      .company > a {
+          font-size: 0.7rem;
+      }
+  }
+  @media screen and (max-width:768px) {
+      .company {
+          width: 100%;
+          gap: 10px;
+          font-size: 0.8rem;
+      }
+      .company > h3 {
+          font-size: 1rem;
+      }
+      .company > a {
+          font-size: 0.7rem;
+      }
+  }
+  
+  .service {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 20px;
+  }
+  .service > h3 {
+      font-size: 1rem;
+      color: #fe4328;
+  }
+  .service > a {
+      text-decoration: none;
+      color: white;
+      font-size: 0.8rem;
+      transition: 0.4s ease-in-out;
+  }
+  
+  .service > a:hover {
+      color: #fe4328;
+      padding-left: 10px;
+      transition: 0.3s ease-in-out;
+  }
+  
+  @media screen and (max-width:650px) {
+      .service {
+          width: 100%;
+          gap: 10px;
+          font-size: 0.8rem;
+      }
+      .service > h3 {
+          font-size: 1rem;
+      }
+      .service > a {
+          font-size: 0.7rem;
+      }
+  }
+  @media screen and (max-width:768px) {
+      .service {
+          width: 100%;
+          gap: 10px;
+          font-size: 0.8rem;
+      }
+      .service > h3 {
+          font-size: 1rem;
+      }
+      .service > a {
+          font-size: 0.7rem;
+      }
+  }
+  
+  .get {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 20px;
+  }
+  .get > h3 {
+      font-size: 1rem;
+      color: #fe4328;
+  }
+  
+  .get > a {
+      display: flex;
+      text-decoration: none;
+      gap: 10px;
+      font-size: 0.8rem;
+      color: white;
+  }
+  .get > a > .fa-solid {
+      background-color: transparent;
+  }
+  .get > p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+      gap: 15px;
+      font-size: 0.8rem;
+      color: white;
+  }
+  .get > p > .fa-solid {
+      color: #fe4328;
+  }
+  
+  @media screen and (max-width:650px) {
+      .get {
+          width: 100%;
+          gap: 10px;
+      }
+      .get > h3 {
+          font-size: 1rem;
+      }
+      .get > a {
+          font-size: 0.7rem;
+      }
+      .get > p {
+          font-size: 0.7rem;
+      }
+  }
+  @media screen and (max-width:768px) {
+      .get {
+          width: 100%;
+          gap: 10px;
+      }
+      .get > h3 {
+          font-size: 1rem;
+      }
+      .get > a {
+          font-size: 0.7rem;
+      }
+      .get > p {
+          font-size: 0.7rem;
+      }
+  }
+  
+  .join {
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      padding: 20px;
+  }
+  .join > h3 {
+      width: 100%;
+      font-size: 1rem;
+      color: white;
+  }
+  
+  @media screen and (max-width:650px) {
+      .join {
+          width: 100%;
+          padding: 10px;
+          flex-direction: column;
+      }
+      .join > h3 {
+          width: 100%;
+          font-weight: normal;
+      }
+  }
+  @media screen and (max-width:768px) {
+      .join {
+          width: 100%;
+          padding: 10px;
+      }
+      .join > h3 {
+          width: 100%;
+          font-weight: normal;
+      }
+  }
+  
+  .join > form {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .join > form > input {
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      font-size: 0.8rem;
+      color: white;
+      background-color: transparent;
+      outline: none;
+      border: 0.5px solid whitesmoke;
+  }
+  .join > form > button {
+      width: 20%;
+      height: 100%;
+      background-color: #fe4328;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+  }
+  
+  @media screen and (max-width:650px) {
+      .join > form {
+          width: 100%;
+          height: fit-content;
+      }
+      .join > form > input {
+          width: 100%;
+          height: fit-content;
+          font-size: 0.8rem;
+      }
+      .join > form > button {
+          font-size: 0.8rem;
+      }
+  }
+  @media screen and (max-width:768px) {
+      .join > form {
+          width: 100%;
+          height: fit-content;
+      }
+      .join > form > input {
+          width: 100%;
+          height: fit-content;
+          font-size: 0.8rem;
+      }
+      .join > form > button {
+          font-size: 0.8rem;
+      }
+  }
